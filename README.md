@@ -81,24 +81,6 @@ Os resultados indicam que a utilização de IA na otimização de rotas é altam
 Estudante de Engenharia da Computação
 
 
-## ▶️ Como executar o projeto
-
-### 1. Criar ambiente virtual (opcional)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-### 2. Instalar dependências
-pip install -r requirements.txt
-
-### 3. Executar o projeto
-python src/main.py
-
-### 4. Ver resultados
-- Terminal: melhor rota e custo
-- Pasta /outputs: gráfico dos clusters
-
-
 
 Grafico
 
@@ -122,3 +104,85 @@ Esse gráfico é ideal para:
 📈 seção “Resultados / Outputs”
 
 🧪 Simulação
+
+
+
+## ▶️ Como executar o projeto
+
+### 1. Criar ambiente virtual (opcional)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+### 2. Instalar dependências
+pip install -r requirements.txt
+
+### 3. Executar o projeto
+python src/main.py
+
+### 4. Ver resultados
+- Terminal: melhor rota e custo
+- Pasta /outputs: gráfico dos clusters
+
+
+▶️ Instruções para Execução do Projeto
+📌 Pré-requisitos
+
+Antes de executar o projeto, é necessário ter instalado:
+
+Python 3.8 ou superior
+
+pip (gerenciador de pacotes do Python)
+
+Para verificar se o Python está instalado:
+
+python --version
+
+
+ou
+
+python3 --version
+
+📦 Bibliotecas Necessárias
+
+As bibliotecas utilizadas no projeto são:
+
+pandas – manipulação de dados
+
+scikit-learn – algoritmo K-Means
+
+matplotlib – geração de gráficos
+
+Todas estão listadas no arquivo requirements.txt.
+
+📁 Estrutura do Projeto
+
+Certifique-se de que o projeto esteja organizado da seguinte forma:
+
+rota-inteligente/
+│
+├── src/
+│   ├── main.py
+│   ├── graph.py
+│   ├── route.py
+│   └── clustering.py
+│
+├── data/
+│   ├── mapa.csv
+│   └── entregas.csv
+│
+├── outputs/
+│
+├── requirements.txt
+└── README.md
+
+🧪 Passo a Passo para Execução
+1️⃣ Clonar ou baixar o projeto
+
+Caso esteja usando Git:
+
+git clone https://github.com/seu-usuario/rota-inteligente.git
+cd rota-inteligente
+
+
+Ou apenas extraia o arquivo .zip e entre na pasta do projeto.
