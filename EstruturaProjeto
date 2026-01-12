@@ -1,0 +1,20 @@
+rota-inteligente/
+│
+├── src/
+│   ├── main.py
+│   ├── graph.py
+│   ├── clustering.py
+│   └── route.py
+│
+├── data/
+│   ├── mapa.csv
+│   └── entregas.csv
+│
+├── outputs/
+│   └── rotas_clusters.png
+│
+├── docs/
+│   └── relatorio.md
+│
+├── requirements.txt
+└── README.md
