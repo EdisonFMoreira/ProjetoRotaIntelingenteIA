@@ -1,0 +1,96 @@
+src/graph.py
+
+
+
+import csv
+from collections import defaultdict
+
+def load_graph(path):
+    graph = defaultdict(dict)
+    with open(path, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            o, d, w = row['origem'], row['destino'], float(row['distancia'])
+            graph[o][d] = w
+            graph[d][o] = w
+    return graph
+
+
+
+src/route.py (A*)
+
+
+
+import heapq
+
+def a_star(graph, start, goal):
+    queue = [(0, start, [])]
+    visited = set()
+
+    while queue:
+        cost, node, path = heapq.heappop(queue)
+        if node in visited:
+            continue
+
+        path = path + [node]
+        visited.add(node)
+
+        if node == goal:
+            return path, cost
+
+        for neighbor, weight in graph[node].items():
+            if neighbor not in visited:
+                heapq.heappush(queue, (cost + weight, neighbor, path))
+
+    return None, float('inf')
+
+
+
+
+src/clustering.py
+
+
+
+
+
+import pandas as pd
+from sklearn.cluster import KMeans
+
+def cluster_entregas(csv_path, k=2):
+    df = pd.read_csv(csv_path)
+    coords = df[['x', 'y']]
+    kmeans = KMeans(n_clusters=k, random_state=0)
+    df['cluster'] = kmeans.fit_predict(coords)
+    return df
+
+
+
+
+src/main.py
+
+
+
+
+import matplotlib.pyplot as plt
+from graph import load_graph
+from route import a_star
+from clustering import cluster_entregas
+
+# Carregar grafo
+graph = load_graph('data/mapa.csv')
+
+# Calcular rota
+rota, custo = a_star(graph, 'A', 'E')
+print("Melhor rota:", rota)
+print("Custo total:", custo)
+
+# Clustering
+df = cluster_entregas('data/entregas.csv', k=2)
+
+# Plot
+plt.scatter(df['x'], df['y'], c=df['cluster'])
+for i, row in df.iterrows():
+    plt.text(row['x']+0.1, row['y']+0.1, str(row['id']))
+plt.title('Clusters de Entregas')
+plt.savefig('outputs/rotas_clusters.png')
+plt.show()
