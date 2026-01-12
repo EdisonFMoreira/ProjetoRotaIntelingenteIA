@@ -155,24 +155,5 @@ matplotlib – geração de gráficos
 
 Todas estão listadas no arquivo requirements.txt.
 
-📁 Estrutura do Projeto
 
-Certifique-se de que o projeto esteja organizado da seguinte forma:
-
-rota-inteligente/
-│
-├── src/
-│   ├── main.py
-│   ├── graph.py
-│   ├── route.py
-│   └── clustering.py
-│
-├── data/
-│   ├── mapa.csv
-│   └── entregas.csv
-│
-├── outputs/
-│
-├── requirements.txt
-└── README.md
 
