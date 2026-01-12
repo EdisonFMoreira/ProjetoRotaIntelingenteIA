@@ -104,3 +104,21 @@ Grafico
 
 <img width="554" height="455" alt="grafico de clustering" src="https://github.com/user-attachments/assets/a4ce9963-fd6f-4caf-90cd-00220c7267a6" />
 
+
+gráfico de clustering (K-Means)
+
+📊 O que o gráfico mostra
+
+Cada ponto representa uma entrega
+
+Os números são os IDs das entregas
+
+As cores diferentes representam os clusters (zonas de entrega)
+
+Visualmente, fica claro como as entregas foram agrupadas por proximidade
+
+Esse gráfico é ideal para:
+
+📈 seção “Resultados / Outputs”
+
+🧪 Simulação
