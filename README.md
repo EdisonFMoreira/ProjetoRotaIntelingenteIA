@@ -176,13 +176,3 @@ rota-inteligente/
 ├── requirements.txt
 └── README.md
 
-🧪 Passo a Passo para Execução
-1️⃣ Clonar ou baixar o projeto
-
-Caso esteja usando Git:
-
-git clone https://github.com/seu-usuario/rota-inteligente.git
-cd rota-inteligente
-
-
-Ou apenas extraia o arquivo .zip e entre na pasta do projeto.
