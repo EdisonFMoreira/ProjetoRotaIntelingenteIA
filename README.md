@@ -79,3 +79,21 @@ Os resultados indicam que a utilização de IA na otimização de rotas é altam
 ## 👨‍💻 Autor
 **Edison Felipe Neves Moreira**  
 Estudante de Engenharia da Computação
+
+
+## ▶️ Como executar o projeto
+
+### 1. Criar ambiente virtual (opcional)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+### 2. Instalar dependências
+pip install -r requirements.txt
+
+### 3. Executar o projeto
+python src/main.py
+
+### 4. Ver resultados
+- Terminal: melhor rota e custo
+- Pasta /outputs: gráfico dos clusters
