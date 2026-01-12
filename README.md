@@ -97,3 +97,10 @@ python src/main.py
 ### 4. Ver resultados
 - Terminal: melhor rota e custo
 - Pasta /outputs: gráfico dos clusters
+
+
+
+Grafico
+
+<img width="554" height="455" alt="grafico de clustering" src="https://github.com/user-attachments/assets/a4ce9963-fd6f-4caf-90cd-00220c7267a6" />
+
