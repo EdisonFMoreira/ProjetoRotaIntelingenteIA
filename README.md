@@ -153,6 +153,9 @@ scikit-learn – algoritmo K-Means
 
 matplotlib – geração de gráficos
 
+
+OBS: Certifique-se de que o projeto esteja organizado DA MANEIRA INDICADA A PASTA Estrutura do Projeto.
+
 Todas estão listadas no arquivo requirements.txt.
 
 
